@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Miristan — Strategic Services across the India-Eurasia-Gulf-Africa Y</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&family=Inter+Tight:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a1210;
+    --paper: #faf5ef;
+    --paper-2: #f2ebe0;
+    --rust: #d04a32;
+    --rust-dark: #a83825;
+    --gold: #c09040;
+    --teal: #236b60;
+    --line: #2e2420;
+    --muted: #6b6058;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 16px;
+    line-height: 1.55;
+    overflow-x: hidden;
+  }
+  .wrap { max-width: 1280px; margin: 0 auto; padding: 0 36px; }
+  .mono { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; }
+  .display { font-family: 'Inter Tight', sans-serif; font-weight: 500; line-height: 1; letter-spacing: -0.025em; }
+  .display em { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; letter-spacing: -0.01em; }
+
+  /* NAV */
+  nav.top {
+    position: sticky; top: 0; z-index: 50;
+    backdrop-filter: blur(12px);
+    background: rgba(244,239,230,0.85);
+    border-bottom: 1px solid rgba(15,23,20,0.08);
+  }
+  nav.top .wrap {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-top: 18px; padding-bottom: 18px;
+  }
+  .brand {
+    display: flex; align-items: center; gap: 12px;
+    font-family: 'Inter Tight', sans-serif; font-size: 1.25rem; font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+  .brand-mark {
+    width: 32px; height: 32px;
+    border: 1.5px solid var(--ink);
+    border-radius: 50%;
+    display: grid; place-items: center;
+    font-size: 0.9rem; font-weight: 800;
+  }
+  nav.top ul { list-style: none; display: flex; gap: 28px; }
+  nav.top a {
+    color: var(--ink); text-decoration: none;
+    font-size: 0.88rem; font-weight: 500;
+    position: relative; padding-bottom: 4px;
+  }
+  nav.top a::after {
+    content: ''; position: absolute; bottom: 0; left: 0;
+    width: 0; height: 1px; background: var(--rust);
+    transition: width 0.3s ease;
+  }
+  nav.top a:hover::after { width: 100%; }
+  .cta {
+    background: var(--ink); color: var(--paper);
+    padding: 10px 18px; border-radius: 999px;
+    font-size: 0.82rem; font-weight: 500;
+    text-decoration: none;
+  }
+  .yt-pill {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 8px 14px 8px 12px; border-radius: 999px;
+    background: rgba(208,74,50,0.08);
+    border: 1px solid rgba(208,74,50,0.25);
+    color: var(--rust); text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem; letter-spacing: 0.04em;
+    text-transform: uppercase; font-weight: 500;
+    transition: background 0.2s ease;
+  }
+  .yt-pill:hover { background: rgba(208,74,50,0.15); }
+  .yt-pill svg { width: 14px; height: 14px; flex-shrink: 0; }
+  .inline-link {
+    color: var(--rust); text-decoration: none;
+    border-bottom: 1px solid rgba(208,74,50,0.4);
+    font-weight: 500;
+  }
+  .inline-link:hover { border-bottom-color: var(--rust); }
+
+  /* HERO */
+  .hero {
+    padding: 80px 0 100px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute; inset: 0;
+    background-image:
+      radial-gradient(circle at 20% 30%, rgba(208,74,50,0.08) 0%, transparent 40%),
+      radial-gradient(circle at 80% 70%, rgba(31,93,86,0.07) 0%, transparent 45%);
+    pointer-events: none;
+  }
+  .hero-grid {
+    display: grid; grid-template-columns: 1.4fr 1fr;
+    gap: 80px; align-items: center;
+    position: relative;
+  }
+  .hero h1 {
+    font-size: clamp(2.6rem, 5.4vw, 4.6rem);
+    margin-top: 22px; margin-bottom: 28px;
+    font-weight: 500; letter-spacing: -0.028em;
+    line-height: 1.02;
+  }
+  .hero h1 em {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic; font-weight: 400;
+    color: var(--ink); letter-spacing: -0.01em;
+  }
+  .hero-sub {
+    max-width: 540px; font-size: 1.08rem;
+    color: var(--muted); margin-bottom: 32px;
+  }
+  .hero-actions {
+    display: flex; gap: 14px; flex-wrap: wrap;
+    margin-bottom: 44px;
+  }
+  .cta-primary {
+    background: var(--rust); color: var(--paper);
+    padding: 14px 26px; border-radius: 999px;
+    text-decoration: none; font-weight: 500;
+    font-size: 0.95rem;
+    transition: transform 0.2s ease, background 0.2s ease;
+    box-shadow: 0 6px 20px rgba(208,74,50,0.25);
+  }
+  .cta-primary:hover { transform: translateY(-1px); background: #a83825; }
+  .cta-ghost {
+    color: var(--ink); text-decoration: none;
+    padding: 14px 22px; border-radius: 999px;
+    border: 1px solid rgba(15,23,20,0.25);
+    font-weight: 500; font-size: 0.95rem;
+    transition: background 0.2s ease;
+  }
+  .cta-ghost:hover { background: rgba(15,23,20,0.06); }
+  .hero-meta {
+    display: flex; gap: 32px;
+    padding-top: 24px; border-top: 1px solid rgba(15,23,20,0.12);
+  }
+  .hero-meta div span.mono { color: var(--rust); display: block; margin-bottom: 4px; }
+  .hero-meta div strong { font-family: 'Inter Tight', sans-serif; font-size: 1.25rem; font-weight: 600; letter-spacing: -0.015em; }
+
+  /* Y-FORK SVG */
+  .y-fork {
+    width: 100%; max-width: 420px;
+    margin: 0 auto;
+  }
+
+  /* THESIS */
+  .thesis {
+    padding: 90px 0;
+    border-top: 1px solid rgba(15,23,20,0.1);
+    background: var(--paper-2);
+  }
+  .thesis-grid {
+    display: grid; grid-template-columns: 1fr 2fr;
+    gap: 60px;
+  }
+  .thesis h2 {
+    font-size: clamp(1.7rem, 2.8vw, 2.4rem);
+    line-height: 1.1;
+    font-weight: 500; letter-spacing: -0.02em;
+  }
+  .thesis-body p {
+    font-size: 1.02rem; margin-bottom: 18px;
+    color: var(--ink);
+  }
+  .stat span.mono { color: var(--muted); display: block; margin-bottom: 6px; }
+  .stat strong {
+    font-family: 'Inter Tight', sans-serif; font-size: 1.6rem;
+    font-weight: 600; display: block; letter-spacing: -0.02em;
+  }
+  .stat-row {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 24px; margin-top: 40px;
+    padding-top: 32px; border-top: 1px solid rgba(15,23,20,0.15);
+  }
+  .stat small { font-size: 0.78rem; color: var(--muted); }
+
+  /* PILLARS */
+  .pillars { padding: 100px 0; }
+  .section-head {
+    display: flex; justify-content: space-between; align-items: end;
+    margin-bottom: 56px;
+    padding-bottom: 24px; border-bottom: 1px solid rgba(15,23,20,0.15);
+  }
+  .section-head h2 {
+    font-family: 'Inter Tight', sans-serif; font-weight: 500;
+    font-size: clamp(1.9rem, 3.4vw, 2.8rem); line-height: 1.05;
+    letter-spacing: -0.025em;
+    max-width: 700px;
+  }
+  .section-head .mono { color: var(--rust); }
+
+  .pillar-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr);
+    gap: 1px; background: rgba(15,23,20,0.12);
+    border: 1px solid rgba(15,23,20,0.12);
+  }
+  .pillar {
+    background: var(--paper);
+    padding: 44px 38px 38px;
+    position: relative;
+    transition: background 0.3s ease;
+  }
+  .pillar:hover { background: var(--paper-2); }
+  .pillar-icon {
+    width: 56px; height: 56px;
+    border: 1.5px solid var(--ink);
+    border-radius: 50%;
+    display: grid; place-items: center;
+    margin-bottom: 24px;
+  }
+  .pillar-icon svg { width: 26px; height: 26px; }
+  .pillar h3 {
+    font-family: 'Inter Tight', sans-serif; font-size: 1.4rem;
+    font-weight: 600; margin-bottom: 14px; letter-spacing: -0.02em;
+  }
+  .pillar p { font-size: 0.95rem; color: var(--muted); margin-bottom: 22px; line-height: 1.6; }
+  .pillar p strong { color: var(--ink); font-weight: 600; }
+  .pillar .tag-row { display: flex; gap: 8px; flex-wrap: wrap; }
+  .tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem; padding: 4px 10px;
+    border: 1px solid rgba(15,23,20,0.2); border-radius: 999px;
+    color: var(--ink); text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .pillar .num {
+    position: absolute; top: 24px; right: 28px;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--muted); font-size: 0.78rem;
+    letter-spacing: 0.08em;
+  }
+
+  /* GEOGRAPHY */
+  .geo {
+    background: var(--ink); color: var(--paper);
+    padding: 100px 0;
+  }
+  .geo .section-head { border-bottom-color: rgba(244,239,230,0.18); }
+  .geo .section-head .mono { color: var(--gold); }
+  .geo-grid {
+    display: grid; grid-template-columns: 1.2fr 1fr;
+    gap: 80px; align-items: start;
+  }
+  .geo-img {
+    width: 100%; border-radius: 4px;
+    filter: grayscale(0.3) sepia(0.15);
+  }
+  .arm {
+    padding: 28px 0;
+    border-top: 1px solid rgba(244,239,230,0.18);
+  }
+  .arm:last-child { border-bottom: 1px solid rgba(244,239,230,0.18); }
+  .arm-head {
+    display: flex; gap: 16px; align-items: baseline;
+    margin-bottom: 10px;
+  }
+  .arm-head .mono { color: var(--rust); }
+  .arm h4 {
+    font-family: 'Inter Tight', sans-serif; font-size: 1.25rem;
+    font-weight: 600; letter-spacing: -0.015em;
+  }
+  .arm p { color: rgba(244,239,230,0.7); font-size: 0.95rem; max-width: 480px; }
+
+  /* SERVICES */
+  .services {
+    padding: 100px 0;
+    background: var(--paper-2);
+  }
+  .service-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+  .service-card {
+    background: var(--paper);
+    border: 1px solid rgba(15,23,20,0.15);
+    padding: 44px 40px;
+    position: relative;
+    display: flex; flex-direction: column;
+  }
+  .service-card.premium {
+    background: var(--ink); color: var(--paper);
+    border-color: var(--ink);
+  }
+  .service-card .badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem; letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 24px; color: var(--rust);
+  }
+  .service-card.premium .badge { color: var(--gold); }
+  .service-card h3 {
+    font-family: 'Inter Tight', sans-serif; font-size: 1.9rem;
+    font-weight: 600; margin-bottom: 8px;
+    line-height: 1; letter-spacing: -0.025em;
+  }
+  .service-card p.tagline {
+    font-family: 'Inter Tight', sans-serif; font-size: 0.95rem;
+    margin-bottom: 28px; color: var(--muted);
+  }
+  .service-card.premium p.tagline { color: rgba(244,239,230,0.75); }
+  .service-card ul {
+    list-style: none; margin-bottom: 36px; flex-grow: 1;
+  }
+  .service-card li {
+    padding: 10px 0;
+    border-top: 1px solid rgba(15,23,20,0.1);
+    font-size: 0.94rem;
+    display: flex; gap: 12px; align-items: start;
+  }
+  .service-card.premium li { border-top-color: rgba(244,239,230,0.15); }
+  .service-card li::before {
+    content: '→'; color: var(--rust); flex-shrink: 0;
+  }
+  .service-card.premium li::before { color: var(--gold); }
+  .price-row {
+    display: flex; justify-content: space-between; align-items: end;
+    padding-top: 24px; border-top: 1px solid rgba(15,23,20,0.15);
+  }
+  .service-card.premium .price-row { border-top-color: rgba(244,239,230,0.18); }
+  .price strong {
+    font-family: 'Inter Tight', sans-serif; font-size: 1.85rem;
+    font-weight: 600; line-height: 1; letter-spacing: -0.025em;
+  }
+  .price small {
+    display: block; font-size: 0.78rem; color: var(--muted);
+    margin-top: 4px;
+  }
+  .service-card.premium .price small { color: rgba(244,239,230,0.65); }
+  .book {
+    background: var(--rust); color: var(--paper);
+    padding: 12px 22px; border-radius: 999px;
+    text-decoration: none; font-size: 0.84rem;
+    font-weight: 500;
+  }
+  .service-card.premium .book {
+    background: var(--gold); color: var(--ink);
+  }
+
+  /* YOUTUBE INTELLIGENCE STRIP */
+  .yt-strip {
+    background: linear-gradient(135deg, #1a1f1c 0%, #1a1210 100%);
+    color: var(--paper);
+    padding: 70px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .yt-strip::before {
+    content: '▶';
+    position: absolute;
+    top: 50%; right: -40px;
+    transform: translateY(-50%);
+    font-size: 22rem; line-height: 1;
+    color: rgba(208,74,50,0.05);
+    pointer-events: none;
+  }
+  .yt-strip-grid {
+    display: grid; grid-template-columns: 1.4fr 1fr;
+    gap: 60px; align-items: center;
+    position: relative; z-index: 1;
+  }
+  .yt-strip .mono { color: var(--rust); margin-bottom: 14px; display: block; }
+  .yt-strip h3 {
+    font-family: 'Inter Tight', sans-serif; font-weight: 500;
+    font-size: clamp(1.7rem, 3vw, 2.2rem); line-height: 1.15;
+    margin-bottom: 18px; letter-spacing: -0.025em;
+  }
+  .yt-strip h3 em { font-family: 'Instrument Serif', serif; font-style: italic; color: var(--paper); font-weight: 400; }
+  .yt-strip p {
+    font-size: 1rem; color: rgba(244,239,230,0.75);
+    max-width: 540px; margin-bottom: 24px;
+  }
+  .yt-stats {
+    display: flex; gap: 32px; flex-wrap: wrap;
+    margin-bottom: 28px;
+    padding-top: 20px; border-top: 1px solid rgba(244,239,230,0.15);
+  }
+  .yt-stats div { display: flex; flex-direction: column; }
+  .yt-stats span { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: rgba(244,239,230,0.5); text-transform: uppercase; letter-spacing: 0.08em; }
+  .yt-stats strong { font-family: 'Inter Tight', sans-serif; font-size: 1.15rem; font-weight: 600; color: var(--paper); letter-spacing: -0.015em; }
+  .yt-cta-row { display: flex; gap: 14px; flex-wrap: wrap; }
+  .yt-watch {
+    display: inline-flex; align-items: center; gap: 10px;
+    background: var(--rust); color: var(--paper);
+    padding: 14px 22px; border-radius: 999px;
+    text-decoration: none; font-weight: 500; font-size: 0.92rem;
+    transition: background 0.2s ease;
+  }
+  .yt-watch:hover { background: #a83825; }
+  .yt-watch svg { width: 18px; height: 18px; }
+  .yt-subscribe {
+    display: inline-flex; align-items: center; gap: 8px;
+    color: var(--paper); padding: 14px 22px; border-radius: 999px;
+    border: 1px solid rgba(244,239,230,0.3);
+    text-decoration: none; font-weight: 500; font-size: 0.92rem;
+  }
+  .yt-card {
+    background: rgba(244,239,230,0.05);
+    border: 1px solid rgba(244,239,230,0.15);
+    border-radius: 6px; padding: 32px 28px;
+    backdrop-filter: blur(8px);
+  }
+  .yt-card-head { display: flex; align-items: center; gap: 14px; margin-bottom: 22px; }
+  .yt-avatar {
+    width: 52px; height: 52px; border-radius: 50%;
+    background: var(--rust);
+    display: grid; place-items: center;
+    font-family: 'Inter Tight', sans-serif; font-size: 1.3rem;
+    color: var(--paper); font-weight: 600;
+  }
+  .yt-card h4 { font-family: 'Inter Tight', sans-serif; font-size: 1.05rem; font-weight: 600; letter-spacing: -0.015em; }
+  .yt-card .handle { font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: rgba(244,239,230,0.6); }
+  .yt-topics {
+    list-style: none; display: flex; flex-direction: column; gap: 10px;
+  }
+  .yt-topics li {
+    display: flex; gap: 10px; align-items: start;
+    font-size: 0.9rem; color: rgba(244,239,230,0.85);
+    padding: 10px 0; border-top: 1px solid rgba(244,239,230,0.1);
+  }
+  .yt-topics li:first-child { border-top: none; padding-top: 0; }
+  .yt-topics li::before { content: '▸'; color: var(--gold); flex-shrink: 0; }
+  .decade {
+    padding: 100px 0;
+    background: var(--paper);
+    position: relative;
+    overflow: hidden;
+  }
+  .decade::before {
+    content: '10';
+    position: absolute;
+    top: -40px; right: -20px;
+    font-family: 'Inter Tight', sans-serif;
+    font-weight: 700; font-style: normal;
+    font-size: 24rem; line-height: 1;
+    color: var(--paper-2);
+    pointer-events: none;
+    z-index: 0;
+    letter-spacing: -0.04em;
+  }
+  .decade .wrap { position: relative; z-index: 1; }
+  .decade-grid {
+    display: grid; grid-template-columns: 1fr 1.3fr;
+    gap: 80px; align-items: start;
+  }
+  .decade-lead h2 {
+    font-family: 'Inter Tight', sans-serif; font-weight: 500;
+    font-size: clamp(2rem, 3.6vw, 3rem); line-height: 1.05;
+    margin-top: 18px; margin-bottom: 28px;
+    letter-spacing: -0.025em;
+  }
+  .decade-lead h2 em { font-family: 'Instrument Serif', serif; font-style: italic; color: var(--ink); font-weight: 400; }
+  .decade-lead p {
+    font-size: 1rem; color: var(--muted);
+    margin-bottom: 18px;
+  }
+  .decade-lead .pull {
+    border-left: 3px solid var(--rust);
+    padding: 14px 18px; margin-top: 28px;
+    font-family: 'Inter Tight', sans-serif;
+    font-size: 1.05rem; line-height: 1.45; font-weight: 500;
+    background: var(--paper-2); color: var(--ink);
+    letter-spacing: -0.01em;
+  }
+  .timeline { position: relative; padding-left: 32px; }
+  .timeline::before {
+    content: ''; position: absolute;
+    left: 6px; top: 8px; bottom: 8px;
+    width: 1px; background: rgba(15,23,20,0.2);
+  }
+  .milestone {
+    position: relative; padding-bottom: 28px;
+  }
+  .milestone:last-child { padding-bottom: 0; }
+  .milestone::before {
+    content: ''; position: absolute;
+    left: -32px; top: 6px;
+    width: 13px; height: 13px;
+    background: var(--paper); border: 2px solid var(--rust);
+    border-radius: 50%;
+  }
+  .milestone .yr {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.78rem; color: var(--rust);
+    letter-spacing: 0.08em; margin-bottom: 4px;
+    display: block;
+  }
+  .milestone h4 {
+    font-family: 'Inter Tight', sans-serif; font-size: 1.05rem;
+    font-weight: 600; margin-bottom: 6px; letter-spacing: -0.015em;
+  }
+  .milestone p { font-size: 0.92rem; color: var(--muted); }
+  .credibility {
+    margin-top: 56px;
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid rgba(15,23,20,0.15);
+    padding-top: 36px;
+  }
+  .cred-item { padding: 0 24px; border-right: 1px solid rgba(15,23,20,0.12); }
+  .cred-item:first-child { padding-left: 0; }
+  .cred-item:last-child { border-right: none; padding-right: 0; }
+  .cred-item .num {
+    font-family: 'Inter Tight', sans-serif; font-size: 2.2rem;
+    font-weight: 700; color: var(--ink); line-height: 1;
+    margin-bottom: 8px; letter-spacing: -0.03em;
+  }
+  .cred-item .lab {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.74rem; color: var(--muted);
+    text-transform: uppercase; letter-spacing: 0.08em;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--ink); color: var(--paper);
+    padding: 70px 0 40px;
+  }
+  .foot-grid {
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 60px; margin-bottom: 50px;
+  }
+  footer h5 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 16px; letter-spacing: 0.1em;
+  }
+  footer ul { list-style: none; }
+  footer li { padding: 6px 0; font-size: 0.92rem; color: rgba(244,239,230,0.75); }
+  footer a { color: inherit; text-decoration: none; }
+  footer a:hover { color: var(--gold); }
+  .foot-tag {
+    font-family: 'Inter Tight', sans-serif; font-size: 1.25rem;
+    font-weight: 400; line-height: 1.4;
+    margin-bottom: 14px; max-width: 320px;
+    color: rgba(244,239,230,0.85);
+    letter-spacing: -0.01em;
+  }
+  .foot-bottom {
+    padding-top: 28px; border-top: 1px solid rgba(244,239,230,0.18);
+    display: flex; justify-content: space-between;
+    font-size: 0.82rem; color: rgba(244,239,230,0.5);
+  }
+
+  @media (max-width: 880px) {
+    .hero-grid, .thesis-grid, .pillar-grid, .geo-grid, .service-grid, .foot-grid, .decade-grid, .yt-strip-grid { grid-template-columns: 1fr; gap: 40px; }
+    .stat-row, .credibility { grid-template-columns: repeat(2, 1fr); }
+    .credibility .cred-item { border-right: none; padding: 12px 0; }
+    .decade::before { font-size: 16rem; right: -20px; top: -30px; }
+    .yt-strip::before { font-size: 14rem; right: -30px; }
+    .nav-yt { display: none; }
+    nav.top ul { display: none; }
+    .section-head { flex-direction: column; align-items: start; gap: 18px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="wrap">
+    <div class="brand">
+      <img src="mlogo.png" alt="Miristan" style="width:34px;height:34px;border-radius:50%;display:block;">
+      Miristan
+    </div>
+    <ul>
+      <li><a href="#thesis">Thesis</a></li>
+      <li><a href="#pillars">Pillars</a></li>
+      <li><a href="#decade">Decade</a></li>
+      <li><a href="#geography">Geography</a></li>
+      <li><a href="#services">Engage</a></li>
+    </ul>
+    <div style="display:flex; gap:12px; align-items:center;">
+      <a href="https://youtube.com/@indiagator" target="_blank" class="yt-pill nav-yt">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 6.2c-.3-1.1-1.1-1.9-2.1-2.2C19 3.5 12 3.5 12 3.5s-7 0-8.9.5C2.1 4.3 1.3 5.1 1 6.2.5 8.1.5 12 .5 12s0 3.9.5 5.8c.3 1.1 1.1 1.9 2.1 2.2 1.9.5 8.9.5 8.9.5s7 0 8.9-.5c1-.3 1.8-1.1 2.1-2.2.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.8 15.6V8.4l6 3.6-6 3.6z"/></svg>
+        @indiagator
+      </a>
+      <a href="#services" class="cta">Start a Conversation</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="mono">Welcome · Consulting &amp; Services Firm · Est. 2014</span>
+      <h1 class="display">Strategic services for Indian businesses operating across <em>Russia, the Gulf, Central Asia and Africa.</em></h1>
+      <p class="hero-sub">You're at the right desk. Miristan is an Indian consulting and services firm helping SMEs, exporters, importers and investors enter, operate and grow across the India–Eurasia–Gulf–Africa <strong>Y-corridor</strong>. One window. One point of accountability. From first conversation to executed order.</p>
+
+      <div class="hero-actions">
+        <a href="#services" class="cta-primary">Book a Consultation →</a>
+        <a href="#thesis" class="cta-ghost">How we work</a>
+        <a href="https://youtube.com/@indiagator" target="_blank" class="yt-pill">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 6.2c-.3-1.1-1.1-1.9-2.1-2.2C19 3.5 12 3.5 12 3.5s-7 0-8.9.5C2.1 4.3 1.3 5.1 1 6.2.5 8.1.5 12 .5 12s0 3.9.5 5.8c.3 1.1 1.1 1.9 2.1 2.2 1.9.5 8.9.5 8.9.5s7 0 8.9-.5c1-.3 1.8-1.1 2.1-2.2.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.8 15.6V8.4l6 3.6-6 3.6z"/></svg>
+          Watch @indiagator
+        </a>
+      </div>
+
+      <div class="hero-meta">
+        <div><span class="mono">Operating since</span><strong>2014</strong></div>
+        <div><span class="mono">Corridor span</span><strong>4 regions · 30+ countries</strong></div>
+        <div><span class="mono">Combined trade flow</span><strong>~$290B/yr</strong></div>
+      </div>
+    </div>
+
+    <!-- Y-Fork SVG -->
+    <svg class="y-fork" viewBox="0 0 360 420" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse">
+          <circle cx="2" cy="2" r="0.6" fill="#1a1210" opacity="0.18"/>
+        </pattern>
+      </defs>
+      <rect width="360" height="420" fill="url(#dots)"/>
+
+      <!-- Y stem (India) -->
+      <line x1="180" y1="420" x2="180" y2="220" stroke="#1a1210" stroke-width="2"/>
+      <!-- Left arm: Eurasia -->
+      <line x1="180" y1="220" x2="60" y2="80" stroke="#d04a32" stroke-width="2"/>
+      <!-- Right arm: Gulf -->
+      <line x1="180" y1="220" x2="280" y2="120" stroke="#236b60" stroke-width="2"/>
+      <!-- Africa branch off right arm -->
+      <line x1="240" y1="160" x2="320" y2="320" stroke="#c09040" stroke-width="2" stroke-dasharray="4 3"/>
+
+      <!-- Nodes -->
+      <circle cx="180" cy="420" r="7" fill="#1a1210"/>
+      <circle cx="180" cy="220" r="5" fill="#1a1210"/>
+      <circle cx="60" cy="80" r="6" fill="#d04a32"/>
+      <circle cx="280" cy="120" r="6" fill="#236b60"/>
+      <circle cx="320" cy="320" r="6" fill="#c09040"/>
+      <circle cx="240" cy="160" r="3.5" fill="#236b60"/>
+
+      <!-- Labels -->
+      <text x="180" y="440" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#1a1210">INDIA</text>
+      <text x="60" y="68" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#d04a32">EURASIA</text>
+      <text x="280" y="108" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#236b60">GULF</text>
+      <text x="320" y="345" text-anchor="middle" font-family="JetBrains Mono" font-size="10" fill="#c09040">AFRICA</text>
+
+      <text x="100" y="160" font-family="Inter Tight, sans-serif" font-style="normal" font-weight="500" font-size="11" fill="#6b6058">INSTC</text>
+      <text x="240" y="200" font-family="Inter Tight, sans-serif" font-style="normal" font-weight="500" font-size="11" fill="#6b6058">IMEC</text>
+      <text x="180" y="330" text-anchor="middle" font-family="Inter Tight, sans-serif" font-style="normal" font-weight="500" font-size="11" fill="#6b6058">single-window</text>
+    </svg>
+  </div>
+</section>
+
+<!-- THESIS -->
+<section class="thesis" id="thesis">
+  <div class="wrap thesis-grid">
+    <div>
+      <span class="mono" style="color:var(--rust);">— 01 / The Thesis</span>
+      <h2 class="display" style="margin-top:14px;">A new commercial geography is replacing the Suez line.</h2>
+    </div>
+    <div class="thesis-body">
+      <p>The world that Indian SMEs sold into for fifty years ran east-to-west through the Suez. The world they will sell into for the next fifty runs along a Y: the INSTC corridor northwest into Iran, Central Asia and Russia (40% shorter, 30% cheaper than Suez); the IMEC corridor west through the UAE and Saudi Arabia into Europe; and a southern descent into Africa via the Gulf hubs.</p>
+      <p>Miristan was founded in 2014 as an Indo-Russian SME bridge. The thesis was correct; the geography expanded faster than anyone forecast. India–Africa trade crossed <strong>USD 103 billion</strong> in FY 2025 (+17% YoY). India–UAE trade crossed <strong>USD 84 billion</strong>, with a $200B target by 2031. INSTC's Eastern Corridor began operating freight in November 2025. Russia now supplies <strong>35–50%</strong> of India's crude. The same operating model — single-window strategic services, success-fee pricing, deep regional fluency — now applies along the entire Y.</p>
+
+      <div class="stat-row">
+        <div class="stat">
+          <span class="mono">India-Africa FY25</span>
+          <strong>$103B</strong><small>+17% YoY · pharma leads at $10B+</small>
+        </div>
+        <div class="stat">
+          <span class="mono">India-UAE FY24</span>
+          <strong>$84B</strong><small>CEPA · $200B target by 2031</small>
+        </div>
+        <div class="stat">
+          <span class="mono">India-Russia oil</span>
+          <strong>35-50%</strong><small>of crude · ~1.8M bpd Mar '26</small>
+        </div>
+        <div class="stat">
+          <span class="mono">C.Asia min. potential</span>
+          <strong>$5.7T</strong><small>Uzbekistan · Kazakhstan = 40% world U</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PILLARS -->
+<section class="pillars" id="pillars">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="display">Four pillars. <em>One operating model.</em></h2>
+      <span class="mono">— 02 / Practice Areas</span>
+    </div>
+
+    <div class="pillar-grid">
+      <!-- AGRICULTURE -->
+      <div class="pillar">
+        <span class="num">01</span>
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 2v20M12 8c-3 0-6-2-6-5 3 0 6 2 6 5zM12 8c3 0 6-2 6-5-3 0-6 2-6 5zM12 14c-3 0-6-2-6-5 3 0 6 2 6 5zM12 14c3 0 6-2 6-5-3 0-6 2-6 5z"/>
+          </svg>
+        </div>
+        <h3>Agriculture &amp; Food</h3>
+        <p>India is the world's largest rice exporter — <strong>20.1 million tonnes worth $12.95B</strong> shipped to 172+ countries in FY25, with 70% of basmati flowing to the Gulf. India's spice exports cover 75+ varieties; agri &amp; processed food exports hit <strong>$25.14B</strong> in FY25, up 13% YoY. Russia exports ~50M tonnes of wheat annually, Kazakhstan ~10M; East African horticulture into the Gulf is a $4B+ corridor. We source, structure and execute across all of it. Our Hindi-language YouTube intelligence channel <a href="https://youtube.com/@indiagator" target="_blank" class="inline-link">@indiagator ↗</a> publishes ground-truth reportage from the Eurasian agri-frontier.</p>
+        <div class="tag-row">
+          <span class="tag">Rice · 40% world share</span>
+          <span class="tag">Russia grain</span>
+          <span class="tag">Spices</span>
+          <span class="tag">Cold chain</span>
+          <span class="tag">Agritourism</span>
+        </div>
+      </div>
+
+      <!-- TRADE -->
+      <div class="pillar">
+        <span class="num">02</span>
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M3 6h18M3 12h18M3 18h18M7 3v3M17 3v3M7 18v3M17 18v3"/>
+          </svg>
+        </div>
+        <h3>Trade &amp; Market Entry</h3>
+        <p>Buyer/supplier identification, sample exchange, contract negotiation, payment-channel structuring (rupee-vostro, AED clearing, third-country settlement), and execution-to-receipt support. CEPA eliminated UAE duties on <strong>97% of tariff lines</strong> covering 99% of Indian export value — over <strong>54,000 preferential CoOs</strong> issued in year one alone. INSTC routes cut Mumbai–Moscow transit by 40% and freight cost by 30% versus Suez. India's UAE non-oil trade target: $100B by 2030. Our productised single-window pricing eliminates the cost guesswork that kills most cross-border SME deals.</p>
+        <div class="tag-row">
+          <span class="tag">CEPA</span>
+          <span class="tag">INSTC</span>
+          <span class="tag">AfCFTA</span>
+          <span class="tag">Bharat Mart</span>
+          <span class="tag">Rupee-vostro</span>
+          <span class="tag">Export Bazaar</span>
+        </div>
+      </div>
+
+      <!-- MANPOWER -->
+      <div class="pillar">
+        <span class="num">03</span>
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="9" cy="8" r="3"/>
+            <path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/>
+            <circle cx="17" cy="6" r="2.5"/>
+            <path d="M16 21v-1a4 4 0 0 1 3-3.87"/>
+          </svg>
+        </div>
+        <h3>Manpower &amp; Mobility</h3>
+        <p>Skilled-labour placement and language-business training along the highest-volume Indian outbound corridors. India's overseas diaspora: <strong>35.4M</strong> people, with <strong>9.7M in the GCC alone</strong> (4.3M UAE, 2.65M Saudi). Total inward remittances hit <strong>$118.7B in FY24</strong> — Gulf-based Indians sent ~40% of it. UAE has committed an additional <strong>140,000 skilled-worker visas</strong> by 2030 under CEPA. Africa hosts a 3M-strong Indian diaspora; ITEC has trained <strong>26,000+</strong> African professionals. Operated through the <em>Miristan School of Language &amp; Business</em>.</p>
+        <div class="tag-row">
+          <span class="tag">CEPA visas</span>
+          <span class="tag">ECR placements</span>
+          <span class="tag">ITEC track</span>
+          <span class="tag">Russian · Arabic</span>
+          <span class="tag">Diaspora ops</span>
+        </div>
+      </div>
+
+      <!-- SECURITY -->
+      <div class="pillar">
+        <span class="num">04</span>
+        <div class="pillar-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z"/>
+            <path d="M9 12l2 2 4-4"/>
+          </svg>
+        </div>
+        <h3>Security &amp; Risk Advisory</h3>
+        <p>Counterparty due diligence, sanctions exposure mapping (US OFAC, EU, UN), payment-channel risk assessment, and supply-chain physical security. The Strait of Hormuz handles <strong>~20% of world oil</strong> (21M bpd); Bab el-Mandeb carries <strong>12% of global trade</strong>; the Suez moves <strong>~30% of container volume</strong>. Indian SMEs now face up to <strong>50% US tariff</strong> exposure on Russia-linked trade and the April 2026 Chabahar sanctions transition. We map exposure, structure third-country routes, and prepare clients for re-entry into Western-vacated sectors. Founded by an ex-DRDO Systems Engineer with 6 years of Armed Forces interface.</p>
+        <div class="tag-row">
+          <span class="tag">OFAC mapping</span>
+          <span class="tag">Due diligence</span>
+          <span class="tag">Hormuz · Suez</span>
+          <span class="tag">Re-entry</span>
+          <span class="tag">DRDO heritage</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DECADE -->
+<section class="decade" id="decade">
+  <div class="wrap">
+    <div class="decade-grid">
+      <div class="decade-lead">
+        <span class="mono" style="color:var(--rust);">— 03 / Why a Decade Matters Here</span>
+        <h2 class="display">Most consultancies arrived in 2024. We have been here since <em>2014.</em></h2>
+        <p>The Y-corridor is not a market that rewards parachute consultants. Russian counterparties test on the second meeting, not the first. Central Asian deals close on personal trust accumulated over years, not memos. African distributors remember which Indian firm followed up after a failed shipment in 2019. Gulf decision-makers route business through people they've shared meals with, not pitch decks they've received.</p>
+        <p>Miristan has spent eleven years building exactly this kind of equity — through the 2014 Crimea sanctions wave, the 2018 US-Iran reimposition, the COVID supply-chain rupture, the 2022 Ukraine invasion, the rupee-rouble negotiation breakdown of 2023, the 2025 secondary tariff regime, and the April 2026 Chabahar transition. We have continuously operated through every shock that sent Western firms home.</p>
+        <div class="pull">"In this region, a decade of presence is worth more than a quarter of expertise. The corridor pays compounding dividends to those who stayed."</div>
+      </div>
+
+      <div>
+        <div class="timeline">
+          <div class="milestone">
+            <span class="yr">Jan 2014</span>
+            <h4>Founded as Miristan Travel Technology</h4>
+            <p>Initial focus on India–Russia trade and travel — the original Indo-Eurasian SME bridge thesis, formed before the corridor was politically fashionable.</p>
+          </div>
+          <div class="milestone">
+            <span class="yr">2016 – 2019</span>
+            <h4>Pivot to Strategic Services</h4>
+            <p>Expanded beyond pharma and garments into manufacturing, services and agriculture. Established consultant network across Russia, India and CIS partners.</p>
+          </div>
+          <div class="milestone">
+            <span class="yr">Dec 2019</span>
+            <h4>Incorporated as OPC Pvt Ltd</h4>
+            <p>Formal registration with the Registrar of Companies, Kanpur (CIN U74999UP2019OPC124483). GST registration followed in October 2020.</p>
+          </div>
+          <div class="milestone">
+            <span class="yr">2020 – 2022</span>
+            <h4>Operated through COVID rupture</h4>
+            <p>While Western firms withdrew, Miristan maintained continuity across the corridor. Geographic ambition expanded toward Israel, Singapore, Eastern Europe and Africa.</p>
+          </div>
+          <div class="milestone">
+            <span class="yr">2022 – 2025</span>
+            <h4>Sanctions-era continuity</h4>
+            <p>Navigated the post-Ukraine settlement architecture: rupee-vostro plumbing, secondary tariff exposure mapping, third-country structuring across UAE and Singapore.</p>
+          </div>
+          <div class="milestone">
+            <span class="yr">2026</span>
+            <h4>Y-corridor positioning</h4>
+            <p>Formal expansion of practice to span the full India–Eurasia–Gulf–Africa Y, with the four pillars — Agriculture, Trade, Manpower, Security — operating as one integrated framework.</p>
+          </div>
+        </div>
+
+        <div class="credibility">
+          <div class="cred-item">
+            <div class="num">11+</div>
+            <div class="lab">Years on the corridor</div>
+          </div>
+          <div class="cred-item">
+            <div class="num">5</div>
+            <div class="lab">Sanctions cycles navigated</div>
+          </div>
+          <div class="cred-item">
+            <div class="num">0</div>
+            <div class="lab">Years out of market</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GEOGRAPHY -->
+<section class="geo" id="geography">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="display">The Y, leg by leg.</h2>
+      <span class="mono">— 04 / Geography</span>
+    </div>
+
+    <div class="geo-grid">
+      <img class="geo-img" src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=900&q=80" alt="Trade corridor map">
+
+      <div>
+        <div class="arm">
+          <div class="arm-head">
+            <span class="mono">NW Arm</span>
+            <h4>Eurasia &amp; Central Asia</h4>
+          </div>
+          <p>INSTC Eastern Corridor operational since Nov 2025: Moscow-to-Tehran in 12 days, 62 containers in the inaugural train. 19M tonnes already moving annually across INSTC routes. Russia–India rupee-vostro accounts handle ~$40B/year in oil settlement. Kazakh and Uzbek critical-mineral programmes ($2.6B Uzbek initiative alone) opening to Indian processing capacity.</p>
+        </div>
+
+        <div class="arm">
+          <div class="arm-head">
+            <span class="mono">NE Arm</span>
+            <h4>Gulf &amp; IMEC</h4>
+          </div>
+          <p>UAE–India CEPA in third year: trade nearly doubled from $43B (FY21) to $84B (FY24), targeting $200B by 2031. Bharat Mart at Jafza opening 2026 with 2.7M sq ft of warehousing and 1,500 showrooms. UAE eliminated tariffs on 97% of lines. Saudi Vision 2030 and the IMEC railway backbone reshape the entire Gulf-to-Mediterranean route. Six UAE CEPAs now active across Asia and Africa.</p>
+        </div>
+
+        <div class="arm">
+          <div class="arm-head">
+            <span class="mono">S Descent</span>
+            <h4>Africa via Gulf hubs</h4>
+          </div>
+          <p>India–Africa trade surpassed <strong>$103B</strong> with 17% YoY growth, on track to $200B by 2031. <strong>70%</strong> of cargo transits Dubai/Doha/Jeddah. Critical minerals from DRC, Zambia, Namibia (30% of world's CRM reserves). Pharma at $10B+ annually. Anchor markets: Kenya, Tanzania, Nigeria, Ethiopia, Egypt, South Africa. ~3M Indian-origin diaspora across the continent.</p>
+        </div>
+
+        <div class="arm">
+          <div class="arm-head">
+            <span class="mono">Stem</span>
+            <h4>India</h4>
+          </div>
+          <p>Operating base in Noida (NCR). Targeting India's $2T export goal by 2030 from the SME tier — the segment Big Four consultancies skip and trade promotion bodies under-serve. Direct lines into MEA-recognised India–Central Asia Dialogue priorities, the National Critical Minerals Mission, and the ITEC capacity-building framework.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- YOUTUBE STRIP -->
+<section class="yt-strip">
+  <div class="wrap yt-strip-grid">
+    <div>
+      <span class="mono">— Field Intelligence</span>
+      <h3 class="display">We don't just consult on the corridor. We <em>report from it.</em></h3>
+      <p>Most consultancies write decks from Mumbai or Delhi. We publish ground-truth Hindi-language reportage from the same regions we advise on — Russian farms, Central Asian markets, African trade routes, Gulf logistics hubs. The same field intelligence that powers our advisory is shared openly on YouTube.</p>
+
+      <div class="yt-stats">
+        <div><span>Channel</span><strong>@indiagator</strong></div>
+        <div><span>Episodes</span><strong>195+</strong></div>
+        <div><span>Languages</span><strong>Hindi · Hinglish</strong></div>
+        <div><span>Focus</span><strong>Eurasia · Africa · Gulf</strong></div>
+      </div>
+
+      <div class="yt-cta-row">
+        <a href="https://youtube.com/@indiagator" target="_blank" class="yt-watch">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 6.2c-.3-1.1-1.1-1.9-2.1-2.2C19 3.5 12 3.5 12 3.5s-7 0-8.9.5C2.1 4.3 1.3 5.1 1 6.2.5 8.1.5 12 .5 12s0 3.9.5 5.8c.3 1.1 1.1 1.9 2.1 2.2 1.9.5 8.9.5 8.9.5s7 0 8.9-.5c1-.3 1.8-1.1 2.1-2.2.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.8 15.6V8.4l6 3.6-6 3.6z"/></svg>
+          Watch on YouTube
+        </a>
+        <a href="https://youtube.com/@indiagator?sub_confirmation=1" target="_blank" class="yt-subscribe">Subscribe →</a>
+      </div>
+    </div>
+
+    <div class="yt-card">
+      <div class="yt-card-head">
+        <div class="yt-avatar">i</div>
+        <div>
+          <h4>Indiagator</h4>
+          <div class="handle">youtube.com/@indiagator</div>
+        </div>
+      </div>
+      <ul class="yt-topics">
+        <li>Farming in Russia — first-hand reportage from grain belts and dairy regions</li>
+        <li>India–Eurasia trade dynamics in plain Hindi</li>
+        <li>Geopolitical shifts across Central Asia, the Gulf and Africa</li>
+        <li>Ground-truth interviews with operators, traders, and migrants</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="display">Two ways to <em>begin.</em></h2>
+      <span class="mono">— 05 / Engage</span>
+    </div>
+
+    <div class="service-grid">
+      <!-- KNOW MORE -->
+      <div class="service-card">
+        <span class="badge">Discovery Call · Multiple Unlimited Duration Sessions</span>
+        <h3>Know More</h3>
+        <p class="tagline">For the first conversation that decides if there even is a conversation.</p>
+        <ul>
+          <li>Multiple unlimited-duration structured calls with a Miristan principal</li>
+          <li>Initial market read on your product/service across the Y-corridor</li>
+          <li>Plain-language assessment of feasibility, risk and timeline</li>
+          <li>Written one-page summary delivered within 72 hours</li>
+        </ul>
+        <div class="price-row">
+          <div class="price">
+            <strong>₹ 2,500</strong>
+            <small>+ 18% GST · per session</small>
+          </div>
+          <a href="mailto:indiagator@gmail.com?subject=Know%20More%20Booking" class="book">Book →</a>
+        </div>
+      </div>
+
+      <!-- EXPLORE -->
+      <div class="service-card premium">
+        <span class="badge">Strategic Engagement · One Year</span>
+        <h3>Explore</h3>
+        <p class="tagline">For when the question is no longer <em>whether</em> but <em>where, how, and with whom</em>.</p>
+        <ul>
+          <li>Targeted market entry plan for one country / one product line</li>
+          <li>Buyer or supplier longlist with preliminary outreach</li>
+          <li>Payment-channel and sanctions-exposure analysis</li>
+          <li>Regulatory, logistics and partner-introduction roadmap</li>
+          <li>One on-ground or virtual buyer meeting facilitated</li>
+        </ul>
+        <div class="price-row">
+          <div class="price">
+            <strong>₹ 1,50,000</strong>
+            <small>+ 18% GST · single engagement</small>
+          </div>
+          <a href="mailto:indiagator@gmail.com?subject=Explore%20Engagement" class="book">Engage →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand" style="color:var(--paper); margin-bottom:18px;">
+          <img src="mlogo.png" alt="Miristan" style="width:34px;height:34px;border-radius:50%;display:block;">
+          Miristan
+        </div>
+        <p class="foot-tag display">Mir · peace. Stan · land. The land of peaceful trade between Asia's rising economies.</p>
+      </div>
+
+      <div>
+        <h5>Practice</h5>
+        <ul>
+          <li><a href="#pillars">Agriculture</a></li>
+          <li><a href="#pillars">Trade</a></li>
+          <li><a href="#pillars">Manpower</a></li>
+          <li><a href="#pillars">Security</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5>Reach</h5>
+        <ul>
+          <li><a href="#geography">Eurasia</a></li>
+          <li><a href="#geography">Gulf &amp; IMEC</a></li>
+          <li><a href="#geography">Africa</a></li>
+          <li><a href="#geography">India</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5>Connect</h5>
+        <ul>
+          <li><a href="mailto:indiagator@gmail.com">indiagator@gmail.com</a></li>
+          <li><a href="https://youtube.com/@indiagator">YouTube · @indiagator</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li>A-79, Sector 22, Noida UP</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <span>© 2026 Miristan Consulting and Services (OPC) Pvt Ltd · CIN U74999UP2019OPC124483</span>
+      <span class="mono">Strategic Services since 2014</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
